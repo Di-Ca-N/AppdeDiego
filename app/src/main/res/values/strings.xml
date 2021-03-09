@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">App de Diego</string>
+    <string name="nav_header_title">Gerenciador de eventos</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+
+    <string name="menu_events">Eventos Cadastrados</string>
+    <string name="menu_calendar">Calendário</string>
+    <string name="menu_timeline">Linha do Tempo</string>
+
+    <string name="calendar_text_view">Em construção</string>
+    <string name="fab_add_event">Adicionar Evento</string>
+    <string name="event_form_edit_event">Edite seu evento</string>
+</resources>

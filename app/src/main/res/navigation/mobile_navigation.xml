@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.appdediego.ui.eventList.EventListFragment"
+        android:label="Eventos Cadastrados"
+        tools:layout="@layout/event_list_fragment">
+        <action
+            android:id="@+id/action_nav_home_to_nav_create_event"
+            app:destination="@id/nav_create_event"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit" />
+        <action
+            android:id="@+id/action_nav_home_to_showEvent"
+            app:destination="@id/showEvent" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="com.example.appdediego.ui.calendar.CalendarFragment"
+        android:label="@string/menu_calendar"
+        tools:layout="@layout/calendar_fragment" />
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="com.example.appdediego.ui.timeline.TimeLineFragment"
+        android:label="@string/menu_timeline"
+        tools:layout="@layout/timeline_fragment" />
+
+    <fragment
+        android:id="@+id/nav_create_event"
+        android:name="com.example.appdediego.ui.eventForm.EventFormFragment"
+        android:label="Evento"
+        tools:layout="@layout/create_event_fragment">
+        <action
+            android:id="@+id/action_nav_create_event_to_nav_home"
+            app:destination="@id/nav_home" />
+        <argument
+            android:name="event"
+            android:defaultValue="@null"
+            app:argType="com.example.appdediego.models.pojo.Event"
+            app:nullable="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/showEvent"
+        android:name="com.example.appdediego.ui.showEvent.ShowEvent"
+        android:label="Visualizar Evento"
+        tools:layout="@layout/show_event_fragment">
+        <action
+            android:id="@+id/action_showEvent_to_nav_create_event"
+            app:destination="@id/nav_create_event" />
+        <argument
+            android:name="event"
+            app:argType="com.example.appdediego.models.pojo.Event" />
+    </fragment>
+</navigation>
